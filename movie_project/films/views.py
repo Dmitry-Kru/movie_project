@@ -3,7 +3,6 @@ from .models import Film
 from .forms import FilmForm
 
 def home(request):
-    """Главная страница"""
     return render(request, 'films/home.html')
 
 def add_film(request):
@@ -11,7 +10,7 @@ def add_film(request):
         form = FilmForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('films_list')
+            return redirect('films:films_list')  # Исправлено здесь
     else:
         form = FilmForm()
     return render(request, 'films/add_film.html', {'form': form})
