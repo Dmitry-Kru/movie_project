@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load django_bootstrap5 %}
+    {% bootstrap_css %}
+    <title>{% block title %}Movie Project{% endblock %}</title>
+</head>
+<body>
+    <div class="container mt-4">
+        {% block content %}{% endblock %}
+    </div>
+    {% bootstrap_javascript %}
+</body>
+</html>

@@ -5,7 +5,7 @@
     <h2 class="mb-4">Добавить новый фильм</h2>
     <form method="post">
         {% csrf_token %}
-        {% django_bootstrap5.form form %}
+        {% bootstrap_form form %}
         <button type="submit" class="btn btn-primary">Сохранить</button>
     </form>
 {% endblock %}

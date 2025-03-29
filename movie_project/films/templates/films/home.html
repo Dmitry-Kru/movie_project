@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Добро пожаловать в Movie Project!</h1>
+<div class="mt-4">
+    <a href="{% url 'films:add_film' %}" class="btn btn-primary me-2">
+        Добавить фильм
+    </a>
+    <a href="{% url 'films:films_list' %}" class="btn btn-outline-secondary">
+        Смотреть список фильмов
+    </a>
+</div>
+{% endblock %}

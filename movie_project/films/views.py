@@ -2,6 +2,10 @@ from django.shortcuts import render, redirect
 from .models import Film
 from .forms import FilmForm
 
+def home(request):
+    """Главная страница"""
+    return render(request, 'films/home.html')
+
 def add_film(request):
     if request.method == 'POST':
         form = FilmForm(request.POST)
